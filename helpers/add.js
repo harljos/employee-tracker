@@ -12,12 +12,12 @@ const addDepartmentPrompt = [
 // adds the department input by user to database
 const addDepartment = (db) => {
     inquirer.prompt(addDepartmentPrompt).then((data) => {
-        db.promise().query(`INSERT INTO department (name) VALUES (?)`, data.name).then(() => {
+        db.promise().query("INSERT INTO department (name) VALUES (?)", data.name).then(() => {
             console.log(`Added ${data.name} to database`);
         });
     });
 }
 
 module.exports = {
-    addDepartment
+    addDepartment,
 }
