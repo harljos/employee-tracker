@@ -47,7 +47,7 @@ const init = async () => {
                     break; 
             }
         })
-        // .then(() => init());
+        .then(() => init());
 }
 
 init();
